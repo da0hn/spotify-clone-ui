@@ -1,10 +1,24 @@
+import 'dart:io';
+
+import 'package:desktop_window/desktop_window.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
+import 'widgets/widgets.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
+    await DesktopWindow.setMinWindowSize(const Size(600, 800));
+  }
+
+  runApp(const SpotifyClone());
 }
 
-class MyApp extends StatelessWidget {
+class SpotifyClone extends StatelessWidget {
+  const SpotifyClone({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,7 +59,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(),
+      home: const Shell(),
     );
   }
 }
