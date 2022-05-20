@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Spotify UI',
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
         appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
         scaffoldBackgroundColor: const Color(0xFF121212),
         backgroundColor: const Color(0xFF121212),
@@ -43,6 +42,7 @@ class MyApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: const Color(0xFF1DB954),
+          brightness: Brightness.dark,
         ),
       ),
       home: Scaffold(),
