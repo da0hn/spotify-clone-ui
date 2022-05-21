@@ -10,17 +10,22 @@ class WindowTitleBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).primaryColor,
-      child: Column(
-        children: [
-          WindowTitleBarBox(
-            child: Row(
-              children: [
-                Expanded(child: MoveWindow()),
-                const _WindowButtons(),
-              ],
+      child: WindowTitleBarBox(
+        child: Row(
+          children: [
+            Expanded(
+              child: MoveWindow(
+                child: Row(
+                  children: [
+                    Container(color: Colors.blue, width: 220),
+                    Expanded(child: Container(color: Colors.red))
+                  ],
+                ),
+              ),
             ),
-          )
-        ],
+            const _WindowButtons(),
+          ],
+        ),
       ),
     );
   }
@@ -51,6 +56,7 @@ class _WindowButtonsState extends State<_WindowButtons> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         MinimizeWindowButton(colors: buttonColors),
         appWindow.isMaximized

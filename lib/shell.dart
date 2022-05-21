@@ -1,4 +1,3 @@
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/widgets.dart';
@@ -9,30 +8,26 @@ class Shell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WindowBorder(
-        color: Theme.of(context).primaryColor,
-        child: Column(
-          children: [
-            const Expanded(
-              flex: 5,
-              child: WindowTitleBar(),
+      body: Column(
+        children: [
+          const WindowTitleBar(),
+          Expanded(
+            flex: 90,
+            child: Row(
+              children: const [
+                SideMenu(),
+                // TODO: PlaylistScreen
+              ],
             ),
-            Expanded(
-              flex: 95,
-              child: Row(
-                children: const [
-                  SideMenu(),
-                  // TODO: PlaylistScreen
-                ],
-              ),
-            ),
-            Container(
-              height: 84.0,
+          ),
+          Expanded(
+            flex: 10,
+            child: Container(
               width: double.infinity,
               color: Colors.blue,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
