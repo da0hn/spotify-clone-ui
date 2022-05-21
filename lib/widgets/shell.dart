@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets.dart';
+
 class Shell extends StatelessWidget {
   const Shell({Key? key}) : super(key: key);
 
@@ -10,13 +12,8 @@ class Shell extends StatelessWidget {
         children: [
           Expanded(
             child: Row(
-              children: [
-                // TODO: SideMenu
-                Container(
-                  height: double.infinity,
-                  width: 280.0,
-                  color: Theme.of(context).primaryColor,
-                ),
+              children: const [
+                SideMenu(),
                 // TODO: PlaylistScreen
               ],
             ),
