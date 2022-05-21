@@ -35,17 +35,16 @@ class _WindowButtons extends StatefulWidget {
 
 class _WindowButtonsState extends State<_WindowButtons> {
   final buttonColors = WindowButtonColors(
-    iconNormal: const Color(0xFF805306),
-    mouseOver: const Color(0xFFF6A00C),
-    mouseDown: const Color(0xFF805306),
-    iconMouseOver: const Color(0xFF805306),
-    iconMouseDown: const Color(0xFFFFD500),
+    iconNormal: const Color(0xFFFFFFFF),
+    mouseOver: const Color(0xFF4C4D51),
+    mouseDown: const Color(0xFF454546),
+    iconMouseOver: const Color(0xFFFFFFFF),
   );
 
   final closeButtonColors = WindowButtonColors(
+    iconNormal: const Color(0xFFFFFFFF),
     mouseOver: const Color(0xFFD32F2F),
     mouseDown: const Color(0xFFB71C1C),
-    iconNormal: const Color(0xFF805306),
     iconMouseOver: Colors.white,
   );
 
