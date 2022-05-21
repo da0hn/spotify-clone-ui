@@ -1,7 +1,4 @@
-import 'dart:io';
-
-import 'package:desktop_window/desktop_window.dart';
-import 'package:flutter/foundation.dart';
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/widgets.dart';
@@ -9,11 +6,14 @@ import 'widgets/widgets.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
-    await DesktopWindow.setMinWindowSize(const Size(600, 800));
-  }
-
   runApp(const SpotifyClone());
+
+  doWhenWindowReady(() {
+    const initialSize = Size(600, 800);
+    appWindow.minSize = initialSize;
+    appWindow.size = initialSize;
+    appWindow.show();
+  });
 }
 
 class SpotifyClone extends StatelessWidget {
