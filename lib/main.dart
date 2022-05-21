@@ -55,7 +55,7 @@ class SpotifyClone extends StatelessWidget {
           ),
         ),
         scrollbarTheme: ScrollbarThemeData(
-          thumbColor: MaterialStateProperty.all(const Color(0xFFB1F3B1)),
+          thumbColor: MaterialStateProperty.all(const Color(0xFF4C4D51)),
         ),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: const Color(0xFF1DB954),
