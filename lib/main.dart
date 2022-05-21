@@ -1,7 +1,7 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/widgets.dart';
+import 'shell.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
