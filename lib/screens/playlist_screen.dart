@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../data/palette.dart';
+import '../widgets/playlist_header.dart';
 
 class PlaylistScreen extends StatefulWidget {
   final Playlist playlist;
@@ -56,8 +57,8 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             horizontal: 20.0,
             vertical: 60.0,
           ),
-          children: const [
-            // TODO: add childrens
+          children: [
+            PlaylistHeader(playlist: widget.playlist),
           ],
         ),
       ),
@@ -113,7 +114,6 @@ class _NavigationButton extends StatelessWidget {
   final IconData iconData;
 
   const _NavigationButton({
-    super.key,
     required this.onTap,
     required this.iconData,
   });

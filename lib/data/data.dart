@@ -145,6 +145,10 @@ class Playlist {
     required this.followers,
     required this.songs,
   });
+
+  String get playlistDetail {
+    return 'Created by $creator • ${songs.length} songs, $duration';
+  }
 }
 
 const lofihiphopPlaylist = Playlist(
