@@ -129,7 +129,11 @@ class _NavigationButton extends StatelessWidget {
           color: Colors.black26,
           shape: BoxShape.circle,
         ),
-        child: Icon(iconData, size: 28.0),
+        child: Icon(
+          iconData,
+          size: 28.0,
+          color: Colors.white,
+        ),
       ),
     );
   }
