@@ -96,7 +96,7 @@ class _PlaylistButtons extends StatelessWidget {
         Text(
           'FOLLOWERS\n$followers',
           style: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12.0),
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.right,
         ),
       ],
     );
