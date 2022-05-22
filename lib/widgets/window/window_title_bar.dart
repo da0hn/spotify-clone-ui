@@ -19,7 +19,7 @@ class WindowTitleBar extends StatelessWidget {
               child: MoveWindow(
                 child: Row(
                   children: [
-                    Container(color: Colors.blue, width: 220),
+                    Container(color: Colors.black, width: 220),
                     Expanded(child: Container(color: Palette.topBar.value))
                   ],
                 ),
