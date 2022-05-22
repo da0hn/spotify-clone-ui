@@ -1,6 +1,8 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/palette.dart';
+
 class WindowTitleBar extends StatelessWidget {
   const WindowTitleBar({
     Key? key,
@@ -18,7 +20,7 @@ class WindowTitleBar extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(color: Colors.blue, width: 220),
-                    Expanded(child: Container(color: Colors.red))
+                    Expanded(child: Container(color: Palette.topBar.value))
                   ],
                 ),
               ),
