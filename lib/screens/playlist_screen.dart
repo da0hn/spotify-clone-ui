@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../data/palette.dart';
-import '../widgets/playlist_header.dart';
+import '../widgets/widgets.dart';
 
 class PlaylistScreen extends StatefulWidget {
   final Playlist playlist;
@@ -59,6 +59,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
           ),
           children: [
             PlaylistHeader(playlist: widget.playlist),
+            TrackList(tracks: widget.playlist.songs),
           ],
         ),
       ),

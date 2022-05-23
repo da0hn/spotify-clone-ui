@@ -18,7 +18,9 @@ class Shell extends StatelessWidget {
             child: Row(
               children: const [
                 SideMenu(),
-                Expanded(child: PlaylistScreen(playlist: lofihiphopPlaylist)),
+                Expanded(
+                  child: PlaylistScreen(playlist: lofihiphopPlaylist),
+                ),
               ],
             ),
           ),
