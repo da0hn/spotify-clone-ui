@@ -1,12 +1,17 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'models/current_track.dart';
 import 'shell.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const SpotifyClone());
+  runApp(ChangeNotifierProvider(
+    create: (BuildContext context) => CurrentTrack(),
+    child: const SpotifyClone(),
+  ));
 
   doWhenWindowReady(() {
     const initialSize = Size(800, 800);
