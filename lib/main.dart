@@ -9,7 +9,7 @@ void main() async {
   runApp(const SpotifyClone());
 
   doWhenWindowReady(() {
-    const initialSize = Size(600, 800);
+    const initialSize = Size(800, 800);
     appWindow.minSize = initialSize;
     appWindow.size = initialSize;
     appWindow.show();
