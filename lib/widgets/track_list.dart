@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../data/data.dart';
-import '../models/current_track.dart';
+import '../models/current_track_model.dart';
 
 class TrackList extends StatelessWidget {
   final List<Song> tracks;
@@ -23,7 +23,8 @@ class TrackList extends StatelessWidget {
         DataColumn(label: Icon(Icons.access_time)),
       ],
       rows: tracks.map((track) {
-        final selected = context.watch<CurrentTrack>().selected?.id == track.id;
+        final selected =
+            context.watch<CurrentTrackModel>().selected?.id == track.id;
 
         final color = selected
             ? Theme.of(context).colorScheme.secondary
@@ -38,7 +39,7 @@ class TrackList extends StatelessWidget {
           ],
           selected: selected,
           onSelectChanged: (_) {
-            context.read<CurrentTrack>().selectTrack(track);
+            context.read<CurrentTrackModel>().selectTrack(track);
           },
         );
       }).toList(),

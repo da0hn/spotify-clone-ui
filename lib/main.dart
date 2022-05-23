@@ -2,14 +2,14 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'models/current_track.dart';
+import 'models/current_track_model.dart';
 import 'shell.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(ChangeNotifierProvider(
-    create: (BuildContext context) => CurrentTrack(),
+    create: (BuildContext context) => CurrentTrackModel(),
     child: const SpotifyClone(),
   ));
 
