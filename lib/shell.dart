@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spotify_ui/data/data.dart';
-import 'package:flutter_spotify_ui/screens/playlist_screen.dart';
 
+import 'data/data.dart';
+import 'screens/playlist_screen.dart';
 import 'widgets/widgets.dart';
 
 class Shell extends StatelessWidget {
@@ -24,13 +24,7 @@ class Shell extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            flex: 10,
-            child: Container(
-              width: double.infinity,
-              color: Colors.blue,
-            ),
-          ),
+          const CurrentTrack(),
         ],
       ),
     );

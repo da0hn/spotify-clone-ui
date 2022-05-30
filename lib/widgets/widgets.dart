@@ -1,3 +1,4 @@
+export 'current_track.dart';
 export 'custom_divider.dart';
 export 'playlist_header.dart';
 export 'side_menu.dart';
