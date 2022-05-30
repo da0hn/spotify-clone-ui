@@ -15,12 +15,12 @@ class CurrentTrack extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(
-          children: const [
-            _TrackInfo(),
-            Spacer(),
-            _TrackPlayerControls(),
-            Spacer(),
-            _MoreControls(),
+          children: [
+            const _TrackInfo(),
+            const Spacer(),
+            const _TrackPlayerControls(),
+            const Spacer(),
+            if (MediaQuery.of(context).size.width > 850) const _MoreControls(),
           ],
         ),
       ),
