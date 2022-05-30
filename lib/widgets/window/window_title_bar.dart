@@ -19,7 +19,7 @@ class WindowTitleBar extends StatelessWidget {
               child: MoveWindow(
                 child: Row(
                   children: [
-                    Container(color: Colors.black, width: 220),
+                    Container(color: _color(context), width: 220),
                     Expanded(child: Container(color: Palette.topBar.value))
                   ],
                 ),
@@ -30,6 +30,12 @@ class WindowTitleBar extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _color(context) {
+    return MediaQuery.of(context).size.width > 800
+        ? Colors.black
+        : Palette.topBar.value;
   }
 }
 
